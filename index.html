@@ -9,9 +9,50 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f6f8;
+  background: #f4f6f8;
   color: #1a1a1a;
-  line-height: 1.6;
+}
+
+nav {
+  background: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 20px;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px 20px;
+  background: white;
+}
+
+.hero h1 {
+  font-size: 44px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 24px;
+  background: #1f2a33;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
 section {
@@ -21,49 +62,6 @@ section {
 .container {
   max-width: 1000px;
   margin: auto;
-}
-
-h1 {
-  font-size: 44px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 18px;
-}
-
-/* HERO */
-.hero {
-  background-color: white;
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 60px;
-  overflow: hidden;
-}
-
-.hero-image-wrapper {
-  margin-top: 40px;
-  overflow: hidden;
-  border-radius: 14px;
-}
-
-.hero img {
-  width: 100%;
-  max-width: 1000px;
-  transition: transform 0.2s ease-out;
-  transform: scale(1);
-  will-change: transform;
-}
-
-/* DARK SECTION */
-.dark-section {
-  background-color: #1f2a33;
-  color: white;
 }
 
 .feature-grid {
@@ -77,10 +75,12 @@ p {
   background: white;
   padding: 25px;
   border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.dark-section .card {
-  background: #2e3b45;
+.dark {
+  background: #1f2a33;
+  color: white;
 }
 
 footer {
@@ -94,90 +94,70 @@ footer {
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <h1>Fieldwork.ai</h1>
-    <p>Turning community conversations into mapped, actionable insight.</p>
-
-    <div class="hero-image-wrapper">
-      <img id="heroImage" src="image1.png" alt="Fieldwork AI Hero Image">
-    </div>
+<nav>
+  <div><strong>Fieldwork.ai</strong></div>
+  <div>
+    <a href="construction.html">Dashboard</a>
+    <a href="construction.html">Projects</a>
+    <a href="construction.html">Map View</a>
+    <a href="construction.html">Reports</a>
   </div>
+</nav>
+
+<section class="hero">
+  <h1>From Conversation to Civic Insight</h1>
+  <p>
+    A research workspace that captures interviews, analyzes recurring themes,
+    and maps community concerns in real time.
+  </p>
+  <a href="construction.html" class="button">Request Demo</a>
 </section>
 
-<!-- PROBLEM -->
 <section>
   <div class="container">
-    <h2>The Problem</h2>
-    <p>
-      Field interviews are essential to understanding neighborhoods,
-      but insights are scattered across transcripts, photos, and notes.
-      Manual synthesis is slow, and recurring patterns often go unnoticed.
-    </p>
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<section class="dark-section">
-  <div class="container">
-    <h2>The Solution</h2>
-    <p>
-      A mobile fieldwork platform that records interviews, attaches geo-tagged media,
-      and uses AI to surface recurring themes and map concerns by location.
-    </p>
+    <h2>The Researcher Workflow</h2>
 
     <div class="feature-grid">
       <div class="card">
-        <h3>Capture</h3>
-        <p>Record interviews and upload photos and video in real time.</p>
+        <h3>1. Capture</h3>
+        <p>Record interviews and attach geo-tagged photos and video directly in the field.</p>
+        <a href="construction.html" class="button">View Field Capture</a>
       </div>
 
       <div class="card">
-        <h3>Analyze</h3>
-        <p>AI transcribes audio and detects recurring themes and urgency.</p>
+        <h3>2. Analyze</h3>
+        <p>AI transcribes interviews and detects recurring themes across media types.</p>
+        <a href="construction.html" class="button">See Insights</a>
       </div>
 
       <div class="card">
-        <h3>Connect</h3>
-        <p>Link visuals, voices, and geography into one unified system.</p>
+        <h3>3. Visualize</h3>
+        <p>Interactive maps reveal patterns, urgency, and neighborhood clusters.</p>
+        <a href="construction.html" class="button">Open Map</a>
       </div>
 
       <div class="card">
-        <h3>Visualize</h3>
-        <p>Map patterns across neighborhoods to support better decisions.</p>
+        <h3>4. Report</h3>
+        <p>Generate exportable summaries for community boards and city agencies.</p>
+        <a href="construction.html" class="button">Generate Report</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- IMPACT -->
-<section>
+<section class="dark">
   <div class="container">
-    <h2>Impact</h2>
-    <p><strong>For Researchers:</strong> Faster synthesis, stronger reporting, reduced manual coding.</p>
-    <p><strong>For Community Boards & Agencies:</strong> Greater transparency, clearer patterns, better-informed planning.</p>
+    <h2>Built for Public Trust</h2>
+    <p>
+      Fieldwork.ai connects voice, visuals, and geography into one structured system —
+      helping agencies move from anecdote to evidence while keeping communities informed.
+    </p>
   </div>
 </section>
 
 <footer>
-  Fieldwork.ai — From Conversation to Civic Insight
+  Fieldwork.ai — Civic Intelligence Platform
 </footer>
-
-<script>
-window.addEventListener("scroll", function () {
-  const image = document.getElementById("heroImage");
-  const scrollY = window.scrollY;
-
-  // Adjust zoom intensity here
-  const scaleAmount = 1 + scrollY * 0.0003;
-
-  // Limit maximum zoom
-  const limitedScale = Math.min(scaleAmount, 1.15);
-
-  image.style.transform = "scale(" + limitedScale + ")";
-});
-</script>
 
 </body>
 </html>
